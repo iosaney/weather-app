@@ -1,3 +1,18 @@
 h1 {
-  color:palevioletred;
+  color:rgb(186, 7, 67);
+}
+
+.btn {
+  border-left:none ;
+  border-color: #dee2e6;
+}
+
+.btn:hover{
+background: none;
+  cursor: pointer;
+  color: black;
+  border-color: #dee2e6;
+}
+.form-control {
+  border-right: none;
 }
