@@ -5,15 +5,32 @@ h1 {
 .btn {
   border-left:none ;
   border-color: #dee2e6;
+  background-color: #dee2e6;
+  border: none;
+  padding-bottom: 0px;
 }
-
 .btn:hover{
-background: none;
+ background: #dee2e6;;
   cursor: pointer;
   color: black;
   border-color: #dee2e6;
 }
 .form-control {
   border-right: none;
-  background-color:#dee2e6; ;
+  background-color:#dee2e6; 
+}
+.form-control:focus {
+  background-color: #dee2e6;
+}
+li{
+  color: rgba(23, 11, 77, 0.856);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.material-symbols-outlined{
+  -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
