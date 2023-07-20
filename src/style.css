@@ -1,6 +1,16 @@
 h1 {
   color:rgb(186, 7, 67);
 }
+#weatherIcon {
+  font-size: 48px;
+  position: relative;
+  top: 12px;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
 .app {
   margin: 60px auto;
   max-width: 800px;
@@ -18,35 +28,43 @@ body{
 
 .btn {
   border-left:none ;
-  background-color: #dee2e6;
+  background-color: #f5f5f5;
   border: none;
-  padding-bottom: 0px;
   border-radius: 15px;
 }
 .btn:hover{
  background: #f5f5f5;;
   cursor: pointer;
   color: black;
+  border: none;
 }
 .form-control {
   height: 48px;
-  border-radius: 15px;
+  border-radius: 15px 15px 15px 15px;
   background-color:#f5f5f5;
-  border: none;
 }
 .form-control:focus {
-  background-color: whitesmoke;
+  background-color: transparent;
+  border: 2px solid black;
 }
-
+.date{
+  font-size:small;
+  font-weight: 600;
+}
 li{
   color: rgba(23, 11, 77, 0.856);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 20px;
     list-style: none;
     margin-bottom: 5px;
+    display: inline;
+    margin: 0px;
 }
-.material-symbols-outlined{
+ul{
+  padding:0;
+}
+#searchIcon{
   -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
