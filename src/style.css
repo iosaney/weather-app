@@ -1,13 +1,21 @@
 h1 {
   color:rgb(186, 7, 67);
 }
-
+.app {
+  margin: 60px auto;
+  max-width: 800px;
+}
+.container {
+  border-radius: 35px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, .08);
+}
 .btn {
   border-left:none ;
   border-color: #dee2e6;
   background-color: #dee2e6;
   border: none;
   padding-bottom: 0px;
+  border-radius: 50px;
 }
 .btn:hover{
  background: #dee2e6;;
@@ -16,8 +24,9 @@ h1 {
   border-color: #dee2e6;
 }
 .form-control {
-  border-right: none;
+  border-radius: 50px;
   background-color:#dee2e6; 
+
 }
 .form-control:focus {
   background-color: #dee2e6;
