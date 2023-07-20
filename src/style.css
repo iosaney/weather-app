@@ -6,31 +6,38 @@ h1 {
   max-width: 800px;
 }
 .container {
-  border-radius: 35px;
+  border-radius: 28px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, .08);
+  background: radial-gradient(circle at 10% 20%,
+        rgb(137, 210, 253) 0%,
+        rgb(255, 241, 188) 90%);
 }
+body{
+  background-color: rgb(221, 234, 255);
+}
+
 .btn {
   border-left:none ;
-  border-color: #dee2e6;
   background-color: #dee2e6;
   border: none;
   padding-bottom: 0px;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 .btn:hover{
- background: #dee2e6;;
+ background: #f5f5f5;;
   cursor: pointer;
   color: black;
-  border-color: #dee2e6;
 }
 .form-control {
-  border-radius: 50px;
-  background-color:#dee2e6; 
-
+  height: 48px;
+  border-radius: 15px;
+  background-color:#f5f5f5;
+  border: none;
 }
 .form-control:focus {
-  background-color: #dee2e6;
+  background-color: whitesmoke;
 }
+
 li{
   color: rgba(23, 11, 77, 0.856);
     font-size: 16px;
