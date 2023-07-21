@@ -19,32 +19,36 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="app">
       <div class="container mt-4 px-5 border">
-        <div class="input-group mt-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search for a City"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <span class="material-symbols-outlined" id="searchIcon">
-              search
-            </span>
-          </button>
-        </div>
-        <p class="date">Today ▸ 18 July 2023</p>
+        <form id="search-form">
+          <div class="input-group mt-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for a City"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              id="search-input"
+              autocomplete="off"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              <span class="material-symbols-outlined" id="searchIcon">
+                search
+              </span>
+            </button>
+          </div>
+        </form>
+        <p class="date"><span id="today">Today</span> ▸ <span id="date"> 18 July 2023 </span> </p>
 
         <div class="row my-5">
           <div class="col-6">
@@ -57,21 +61,24 @@
               >
                 light_mode
               </span>
-              <h1>79</h1>
-              <span class="align-self-start units">ºF | C</span>
+              <h1>30</h1>
+              <span class="align-self-start units">ºC | F</span>
             </div>
           </div>
 
           <div class="col-6 mt-3">
-            <p>today is sunny, with high of 85 and low of 78</p>
+            <p>
+              <span id="descript">sunny</span> currently, the high will be <span id="maxTemp"> 37 </span> and the low
+              will be <span id="minTemp">28</span>
+            </p>
           </div>
         </div>
         <ul class="info">
           <div class="row mt-5 mb-4">
-            <div class="col-3"><li>Wind: 2 km/hr</li></div>
-            <div class="col-3"><li>Pressure:</li></div>
-            <div class="col-3"><li>Humidity:</li></div>
-            <div class="col-3"><li>Feels like:</li></div>
+            <div class="col-3"><li>Wind: <span id="wind"> 2</span>km/hr</li></div>
+            <div class="col-3"><li>Pressure: <span id="pressure"> </span></li></div>
+            <div class="col-3"><li>Humidity: <span id="humidity"> </span>%</li></div>
+            <div class="col-3"><li >Feels like: <span id="feels"> </span></li></div>
           </div>
         </ul>
 
