@@ -128,6 +128,9 @@ a{
 font-weight: 500;
   color: rgb(1, 64, 132);
 }
-#descript{
-  text-transform:capitalize;
+#descript {
+  display: inline-block;
+}
+#descript:first-letter{
+  text-transform: capitalize;
 }
