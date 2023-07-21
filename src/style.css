@@ -30,6 +30,12 @@ h6{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 600;
 }
+p{
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+}
 .app {
   margin: 60px auto;
   max-width: 800px;
@@ -100,16 +106,28 @@ h6{
 }
 
 .weather-temperature, h1{
-  line-height: 1;
+  line-height: 45px;
   font-size: 50px;
 }
 .units{
   font-size: 16px;
   line-height: 45px;
-  padding-left: 0px;
+  padding: 0px;
+  margin: 0;
 }
 .weather-icon{
   font-size: 36px;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.501);
+}
+#maxTemp{
+  font-weight: 500;
+  color: rgb(131, 28, 2);
+}
+#minTemp{
+font-weight: 500;
+  color: rgb(1, 64, 132);
+}
+#descript{
+  text-transform:capitalize;
 }

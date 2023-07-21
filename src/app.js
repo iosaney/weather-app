@@ -24,7 +24,8 @@ function displayCity(response){
   let humidity = document.querySelector("#humidity");
   let pressure = document.querySelector("#pressure")
   let windy = Math.round(response.data.wind.speed);
-  let press = response.data.main.pressure;
+  let press = Math.round((response.data.main.pressure)/33.864
+);
   let humid = response.data.main.humidity;
   wind.innerHTML=windy;
   pressure.innerHTML=press;
