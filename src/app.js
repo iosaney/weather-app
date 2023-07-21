@@ -71,4 +71,4 @@ let month = date.getMonth();
       ];
       let nameOfMonths = months[date.getMonth()];
 let todayDate = document.querySelector("#date");
-todayDate.innerHTML=`${daysOfWeek} - ${day} ${nameOfMonths} ${year}`
+todayDate.innerHTML=`${daysOfWeek}, ${day} ${nameOfMonths} ${year}`
