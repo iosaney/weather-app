@@ -24,27 +24,31 @@ function displayCity(response){
   let humidity = document.querySelector("#humidity");
   let pressure = document.querySelector("#pressure")
   let windy = Math.round(response.data.wind.speed);
-  let press = Math.round((response.data.main.pressure)/33.864
-);
+  let press = Math.round((response.data.main.pressure)/33.864);
+  let icon = document.querySelector("#todayIcon");
+  icon.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  icon.setAttribute("alt", `${description}`);
   let humid = response.data.main.humidity;
   wind.innerHTML=windy;
   pressure.innerHTML=press;
   humidity.innerHTML=humid;
 }
-function findCity(event){
-  event.preventDefault();
-  let searching = document.querySelector("#search-input");
-  console.log(searching.value);
+function findCity(city){
   let apiKey = "97c2f6a3b34509ac62090edc5d18d949";
   let apiEndpoint="https://api.openweathermap.org/data/2.5/weather";
   let units="metric";
-  let apiUrl=`${apiEndpoint}?q=${searching.value}&units=${units}&appid=${apiKey}`
+  let apiUrl=`${apiEndpoint}?q=${city}&units=${units}&appid=${apiKey}`
   axios.get(apiUrl).then(displayCity)
 }
 
-
 let searchCity = document.querySelector("#search-form");
-searchCity.addEventListener("submit", findCity);
+searchCity.addEventListener("submit", function (event){
+  event.preventDefault();
+  let searching = document.querySelector("#search-input");
+  console.log(searching.value);
+  findCity(searching.value)
+})
+findCity("New York")
 
 let date = new Date();
 let weekDay = date.getDay();

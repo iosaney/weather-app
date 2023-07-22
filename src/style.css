@@ -1,5 +1,6 @@
 h1 {
   color:rgb(186, 7, 67);
+  display: inline;
 }
 
 body{
@@ -106,14 +107,15 @@ a{
 }
 
 .weather-temperature, h1{
-  line-height: 45px;
   font-size: 50px;
+  justify-content: flex-start;
 }
 .units{
   font-size: 16px;
   line-height: 45px;
   padding: 0px;
   margin: 0;
+  flex-basis: 60px;
 }
 .weather-icon{
   font-size: 36px;
@@ -133,4 +135,12 @@ font-weight: 500;
 }
 #descript:first-letter{
   text-transform: capitalize;
+}
+#todayIcon{
+  position: relative;
+  bottom:15px;
+}
+.weather-temperature{
+  position: relative;
+  right:15px;
 }
