@@ -2,9 +2,9 @@ console.log("hello world");
 
 function displayCity(response){
   console.log(response);
-  let temp = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
   let h1= document.querySelector("h1");
-  h1.innerHTML= temp;
+  h1.innerHTML= celsiusTemperature;
   let description = response.data.weather[0].description;
   let describe = document.querySelector("#descript");
   describe.innerHTML=description;
@@ -48,6 +48,9 @@ searchCity.addEventListener("submit", function (event){
   console.log(searching.value);
   findCity(searching.value)
 })
+
+let celsiusTemperature = null;
+let celsiusTemp = 
 findCity("New York")
 
 let date = new Date();
