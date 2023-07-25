@@ -45,12 +45,34 @@ let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", function (event){
   event.preventDefault();
   let searching = document.querySelector("#search-input");
-  console.log(searching.value);
+  console.log(searching.value); // not needed
   findCity(searching.value)
 })
 
 let celsiusTemperature = null;
-let celsiusTemp = 
+
+function displayFarenheit(event){
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature*9)/5 +32;
+  let temperatureElement = document.querySelector("h1");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
+let farenheitLink  = document.querySelector("#fahrenheit-link");
+farenheitLink.addEventListener("click", displayFarenheit)
+
+function displayCelsius(event){
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("h1");
+  temperatureElement.innerHTML  = celsiusTemperature;
+}
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
+
 findCity("New York")
 
 let date = new Date();
