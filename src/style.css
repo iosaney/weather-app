@@ -151,5 +151,5 @@ font-weight: 500;
 }
 
 .active:hover{
-  cursor:none;
+  cursor:text;
 }
