@@ -54,14 +54,11 @@ let celsiusTemperature = null;
 function displayFarenheit(event){
   event.preventDefault();
   celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  farenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature*9)/5 +32;
   let temperatureElement = document.querySelector("h1");
   temperatureElement.innerHTML = fahrenheitTemperature;
 }
-
-let farenheitLink  = document.querySelector("#fahrenheit-link");
-farenheitLink.addEventListener("click", displayFarenheit)
 
 function displayCelsius(event){
   event.preventDefault();
@@ -72,6 +69,9 @@ function displayCelsius(event){
 }
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
+
+let farenheitLink  = document.querySelector("#fahrenheit-link");
+farenheitLink.addEventListener("click", displayFarenheit)
 
 findCity("New York")
 

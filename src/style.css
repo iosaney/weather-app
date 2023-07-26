@@ -144,3 +144,12 @@ font-weight: 500;
   position: relative;
   right:15px;
 }
+
+.active {
+  color:black;
+  text-decoration: none;
+}
+
+.active:hover{
+  cursor:none;
+}
