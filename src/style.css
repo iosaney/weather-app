@@ -97,15 +97,6 @@ a{
         'opsz' 48
 }
 
-.forecast-days, .weather-icon, h6{
-  text-align: center;
-  margin:0 auto;
-  display:block;
-}
-.forecast-days{
-  margin-bottom: 15px;
-}
-
 .weather-temperature, h1{
   font-size: 50px;
   justify-content: flex-start;
@@ -117,11 +108,7 @@ a{
   margin: 0;
   flex-basis: 60px;
 }
-.weather-icon{
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.501);
-}
+
 #maxTemp{
   font-weight: 500;
   color: rgb(131, 28, 2);
