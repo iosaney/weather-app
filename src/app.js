@@ -1,5 +1,37 @@
 console.log("hello world");
 
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let weatherForecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row mt-4 mb-3">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-3">
+            <div class="forecast-days">${day}</div>
+            <span class="material-symbols-outlined weather-icon"> air </span>
+            <div class="weather-forecast-temps> 
+            <span class="forecast-max-temp">43</span>
+            <span class="forecast-min-temp">36</span> </div>
+          </div>
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  weatherForecast.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let parts = "alerts,minutely,hourly,current";
+  let units = "metric";
+  let appid = "97c2f6a3b34509ac62090edc5d18d949";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=${parts}&units=${units}&appid=${appid}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayCity(response) {
   console.log(response);
   celsiusTemperature = Math.round(response.data.main.temp);
@@ -35,6 +67,7 @@ function displayCity(response) {
   wind.innerHTML = windy;
   pressure.innerHTML = press;
   humidity.innerHTML = humid;
+  getForecast(response.data.coord);
 }
 function findCity(city) {
   let apiKey = "97c2f6a3b34509ac62090edc5d18d949";
@@ -104,27 +137,3 @@ let months = [
 let nameOfMonths = months[date.getMonth()];
 let todayDate = document.querySelector("#date");
 todayDate.innerHTML = `${daysOfWeek}, ${day} ${nameOfMonths} ${year}`;
-
-function displayForecast() {
-  let weatherForecast = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row mt-4 mb-3">`;
-
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-          <div class="col-3">
-            <div class="forecast-days">${day}</div>
-            <span class="material-symbols-outlined weather-icon"> air </span>
-            <div class="weather-forecast-temps> 
-            <span class="forecast-max-temp">43</span>
-            <span class="forecast-min-temp">36</span> </div>
-          </div>
-          `;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  weatherForecast.innerHTML = forecastHTML;
-}
-
-displayForecast();
