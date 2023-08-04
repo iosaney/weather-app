@@ -37,6 +37,12 @@ p {
 a {
   text-decoration: none;
 }
+footer{
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(0, 0, 0, 0.499);
+  font-weight: 600;
+}
 .app {
   margin: 60px auto;
   max-width: 800px;
