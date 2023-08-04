@@ -16,8 +16,8 @@ h3 {
 }
 li {
   color: rgba(23, 11, 77, 0.856);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 20px;
   list-style: none;
   display: inline;
@@ -32,7 +32,7 @@ h6 {
   font-weight: 600;
 }
 p {
-  font-size: 14px;
+  font-size: 15px;
 }
 a {
   text-decoration: none;
