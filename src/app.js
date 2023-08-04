@@ -1,5 +1,3 @@
-console.log("hello world");
-
 function displayForecast(response) {
   let forecast = response.data.daily;
   let weatherForecast = document.querySelector("#forecast");
@@ -18,10 +16,10 @@ function displayForecast(response) {
             <div class="weather-forecast-temps> 
             <span class="forecast-max-temp">${Math.round(
               forecastDay.temp.max
-            )}</span>
+            )}º</span>
             <span class="forecast-min-temp">${Math.round(
               forecastDay.temp.min
-            )}</span> </div>
+            )}º</span> </div>
           </div>
           `;
     }
@@ -47,7 +45,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let parts = "alerts,minutely,hourly,current";
   let units = "metric";
   let appid = "97c2f6a3b34509ac62090edc5d18d949";
@@ -56,7 +53,6 @@ function getForecast(coordinates) {
 }
 
 function displayCity(response) {
-  console.log(response);
   celsiusTemperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("h1");
   h1.innerHTML = celsiusTemperature;
@@ -104,33 +100,10 @@ let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", function (event) {
   event.preventDefault();
   let searching = document.querySelector("#search-input");
-  console.log(searching.value); // not needed
   findCity(searching.value);
 });
 
 let celsiusTemperature = null;
-
-function displayFarenheit(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  let temperatureElement = document.querySelector("h1");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("h1");
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsius);
-
-let farenheitLink = document.querySelector("#fahrenheit-link");
-farenheitLink.addEventListener("click", displayFarenheit);
 
 findCity("New York");
 
