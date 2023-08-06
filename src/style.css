@@ -42,6 +42,7 @@ footer{
   font-family: 'Courier New', Courier, monospace;
   color: rgba(0, 0, 0, 0.499);
   font-weight: 600;
+  text-align: center;
 }
 .app {
   margin: 60px auto;
